@@ -1,8 +1,13 @@
 import React from 'react';
+import CharacterDisplay from './CharacterDisplay';
 
 const CharacterList = props => {
     return (
-        <h2>Hi</h2>
+        <div>
+        {props.starWarsData.map(starWars => {
+            return <CharacterDisplay starWars={starWars} />
+        })}
+        </div>
     );
 }
 
