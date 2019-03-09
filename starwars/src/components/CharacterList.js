@@ -3,7 +3,7 @@ import CharacterDisplay from './CharacterDisplay';
 
 const CharacterList = props => {
     return (
-        <div>
+        <div className="character-list">
         {props.starWarsData.map(starWars => {
             return <CharacterDisplay starWars={starWars} />
         })}
