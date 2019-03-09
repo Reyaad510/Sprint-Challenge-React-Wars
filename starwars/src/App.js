@@ -8,7 +8,12 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      starwarsChars: []
+      starwarsChars: [],
+      name: '',
+      gender: '',
+      height: '',
+      skinColor: '',
+      hairColor: ''
     };
   }
 
@@ -32,11 +37,22 @@ class App extends Component {
       });
   };
 
+  inputChangeHandler = event => {
+    this.setState({ [event.target.name]: event.target.value })
+  }
+
   render() {
     return (
       <div className="App">
         <h1 className="Header">React Wars</h1>
-        <Form />
+        <Form 
+        inputChangeHandler={this.inputChangeHandler}
+        name={this.state.name}
+        gender={this.state.gender}
+        height={this.state.height}
+        skinColor={this.state.skinColor}
+        hairColor={this.state.hairColor}
+         />
         <CharacterList starWarsData={this.state.starwarsChars} />
       </div>
     );

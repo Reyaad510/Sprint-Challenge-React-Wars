@@ -7,28 +7,33 @@ const Form = props => {
         <form>
             <input 
             name="name"
-            value=''
+            value={props.name}
             placeholder="Name" 
+            onChange={props.inputChangeHandler}
             />
              <input 
             name="gender"
-            value=''
+            value={props.gender}
             placeholder="Gender" 
+            onChange={props.inputChangeHandler}
             />
              <input 
             name="height"
-            value=''
+            value={props.height}
             placeholder="Height" 
+            onChange={props.inputChangeHandler}
             />
              <input 
             name="skincolor"
-            value=''
+            value={props.skinColor}
             placeholder="Skin Color" 
+            onChange={props.inputChangeHandler}
             />
              <input 
             name="haircolor"
-            value=''
+            value={props.hairColor}
             placeholder="Hair Color" 
+            onChange={props.inputChangeHandler}
             />
             <button type='submit'>Add Character</button>
         </form>
