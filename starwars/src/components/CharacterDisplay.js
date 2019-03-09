@@ -5,7 +5,10 @@ const CharacterDisplay = props => {
     return (
         <div className="character-card">
         <h3>{props.starWars.name}</h3>
-        <p><strong>Skin Color: {props.starWars.skin_color}</strong></p>
+        <p><strong>Gender:</strong> {props.starWars.gender}</p>
+        <p><strong>Height:</strong> {props.starWars.height}</p>
+        <p><strong>Skin Color:</strong> {props.starWars.skin_color}</p>
+        <p><strong>Hair Color:</strong> {props.starWars.hair_color}</p>
         </div>
     );
 }
