@@ -5,6 +5,7 @@ const Form = props => {
     return (
         <div className="flex">
         <form onSubmit={props.formSubmitHandler}>
+        <h2>Didn't See Your Favorite Star Wars Character? Add Them Here!</h2>
             <input 
             name="name"
             value={props.name}

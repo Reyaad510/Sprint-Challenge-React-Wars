@@ -3,26 +3,32 @@
 
 .character-list {
     display: flex;
-    flex-flow: column wrap;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .character-card {
-    background-color: white;
-    width: 50%;
-    margin-bottom: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 40%;
+    margin: 20px;
+    background: linear-gradient(#0f0c29,#302b63,#24243e);
+    color: white;
 }
 
 form {
     display: flex;
     flex-direction: column;
     position: relative;
-    width: 50%;
+    width: 81%;
     align-items: center;
     padding: 1rem;
     border: 1px solid black;
     border-radius: 5px;
+    margin-bottom: 20px;
+    background: linear-gradient(#0f0c29,#302b63,#24243e);
+    color: white;
 
     
 }
@@ -38,6 +44,9 @@ form > input {
     outline: 0;
     border: 1px solid #d4d4d4;
     
+}
+::placeholder {
+    color: black;
 }
 
 
@@ -56,4 +65,8 @@ button {
     background-color: rgb(var(--pure-material-onprimary-rgb, 33, 150, 243));
     height: 36px;
     margin-top: 16px;
+}
+
+button:hover {
+    filter: brightness(130%);
 }
