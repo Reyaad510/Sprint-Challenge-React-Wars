@@ -41,6 +41,27 @@ class App extends Component {
     this.setState({ [event.target.name]: event.target.value })
   }
 
+  formSubmitHandler= event => {
+    event.preventDefault();
+    let newCharacter = {
+      name: this.state.name,
+      gender: this.state.gender,
+      height: this.state.height,
+      skinColor: this.state.skinColor,
+      hairColor: this.state.hairColor
+    };
+    this.setState(prevState => {
+      return {
+        starwarsChars: [...prevState.starwarsChars, newCharacter],
+        name:'',
+        gender: '',
+        height: '',
+        skinColor: '',
+        hairColor: ''
+      };
+    })
+  }
+
   render() {
     return (
       <div className="App">
@@ -52,6 +73,7 @@ class App extends Component {
         height={this.state.height}
         skinColor={this.state.skinColor}
         hairColor={this.state.hairColor}
+        formSubmitHandler={this.formSubmitHandler}
          />
         <CharacterList starWarsData={this.state.starwarsChars} />
       </div>

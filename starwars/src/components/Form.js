@@ -4,7 +4,7 @@ import './StarWars.css';
 const Form = props => {
     return (
         <div className="flex">
-        <form>
+        <form onSubmit={props.formSubmitHandler}>
             <input 
             name="name"
             value={props.name}
@@ -24,13 +24,13 @@ const Form = props => {
             onChange={props.inputChangeHandler}
             />
              <input 
-            name="skincolor"
+            name="skinColor"
             value={props.skinColor}
             placeholder="Skin Color" 
             onChange={props.inputChangeHandler}
             />
              <input 
-            name="haircolor"
+            name="hairColor"
             value={props.hairColor}
             placeholder="Hair Color" 
             onChange={props.inputChangeHandler}
