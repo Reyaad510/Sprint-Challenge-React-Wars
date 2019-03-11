@@ -25,14 +25,14 @@ const Form = props => {
             onChange={props.inputChangeHandler}
             />
              <input 
-            name="skinColor"
-            value={props.skinColor}
+            name="skin_color"
+            value={props.skin_color}
             placeholder="Skin Color" 
             onChange={props.inputChangeHandler}
             />
              <input 
-            name="hairColor"
-            value={props.hairColor}
+            name="hair_color"
+            value={props.hair_color}
             placeholder="Hair Color" 
             onChange={props.inputChangeHandler}
             />

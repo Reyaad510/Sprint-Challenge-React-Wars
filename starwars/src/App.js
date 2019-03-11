@@ -12,8 +12,8 @@ class App extends Component {
       name: '',
       gender: '',
       height: '',
-      skinColor: '',
-      hairColor: ''
+      skin_color: '',
+      hair_color: ''
     };
   }
 
@@ -47,8 +47,8 @@ class App extends Component {
       name: this.state.name,
       gender: this.state.gender,
       height: this.state.height,
-      skinColor: this.state.skinColor,
-      hairColor: this.state.hairColor
+      skin_color: this.state.skin_color,
+      hair_color: this.state.hair_color
     };
     this.setState(prevState => {
       return {
@@ -56,8 +56,8 @@ class App extends Component {
         name:'',
         gender: '',
         height: '',
-        skinColor: '',
-        hairColor: ''
+        skin_color: '',
+        hair_color: ''
       };
     })
   }
@@ -71,8 +71,8 @@ class App extends Component {
         name={this.state.name}
         gender={this.state.gender}
         height={this.state.height}
-        skinColor={this.state.skinColor}
-        hairColor={this.state.hairColor}
+        skin_color={this.state.skin_color}
+        hair_color={this.state.hair_color}
         formSubmitHandler={this.formSubmitHandler}
          />
         <CharacterList starWarsData={this.state.starwarsChars} />
