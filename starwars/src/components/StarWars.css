@@ -17,6 +17,10 @@
     color: white;
 }
 
+.character-card h3 {
+ text-decoration: underline;
+}
+
 form {
     display: flex;
     flex-direction: column;
