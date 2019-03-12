@@ -43,16 +43,16 @@ class App extends Component {
 
   formSubmitHandler= event => {
     event.preventDefault();
-    let newCharacter = {
-      name: this.state.name,
-      gender: this.state.gender,
-      height: this.state.height,
-      skin_color: this.state.skin_color,
-      hair_color: this.state.hair_color
-    };
     this.setState(prevState => {
       return {
-        starwarsChars: [...prevState.starwarsChars, newCharacter],
+        starwarsChars: [...prevState.starwarsChars, 
+          {
+            name: prevState.name,
+            gender: prevState.gender,
+            height: prevState.height,
+            skin_color: prevState.skin_color,
+            hair_color: prevState.hair_color
+          }],
         name:'',
         gender: '',
         height: '',
