@@ -1,11 +1,19 @@
 import React, { Component } from 'react';
 import './App.css';
 
+import CharacterList from './components/CharacterList';
+import Form from './components/Form';
+
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      starwarsChars: []
+      starwarsChars: [],
+      name: '',
+      gender: '',
+      height: '',
+      skin_color: '',
+      hair_color: ''
     };
   }
 
@@ -29,10 +37,45 @@ class App extends Component {
       });
   };
 
+  inputChangeHandler = event => {
+    this.setState({ [event.target.name]: event.target.value })
+  }
+
+  formSubmitHandler= event => {
+    event.preventDefault();
+    this.setState(prevState => {
+      return {
+        starwarsChars: [...prevState.starwarsChars, 
+          {
+            name: prevState.name,
+            gender: prevState.gender,
+            height: prevState.height,
+            skin_color: prevState.skin_color,
+            hair_color: prevState.hair_color
+          }],
+        name:'',
+        gender: '',
+        height: '',
+        skin_color: '',
+        hair_color: ''
+      };
+    })
+  }
+
   render() {
     return (
       <div className="App">
         <h1 className="Header">React Wars</h1>
+        <Form 
+        inputChangeHandler={this.inputChangeHandler}
+        name={this.state.name}
+        gender={this.state.gender}
+        height={this.state.height}
+        skin_color={this.state.skin_color}
+        hair_color={this.state.hair_color}
+        formSubmitHandler={this.formSubmitHandler}
+         />
+        <CharacterList starWarsData={this.state.starwarsChars} />
       </div>
     );
   }
